@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Food } from './../models/food-snaps-models';
+import { FoodSnapsService } from '../services/food-snaps.service';
 
 
 
@@ -10,8 +11,13 @@ import { Food } from './../models/food-snaps-models';
 })
 export class FoodSnapComponent implements OnInit {
   @Input()foodSnap!: Food;
-
+ 
+  data:any
+  constructor(public food:FoodSnapsService){
+    
+  }
   ngOnInit(){
+    this.data=this.food.getAllFoodCake();
 
   }
 }

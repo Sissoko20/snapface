@@ -1,2 +1,5 @@
 <p>{{foodSnap.title}}</p>
 <img [src]="foodSnap.imgUrl" alt="" srcset="">
+<div class="foodCake" *ngFor="let item of data">
+<p>{{item.title}}</p>
+</div>
